@@ -1,13 +1,21 @@
 body {
-  background-color: rgb(35, 139, 105);
+  background-color: rgb(54, 132, 107, 0.89);
 }
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
+  max-width: 500px;
+  margin: 25px auto;
+  background-color: #d68438;
   padding: 30px;
   border-radius: 10px;
-  margin: 40px;
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+h1 {
+  text-align: center;
+  font-size: 65px;
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  margin: 20px auto;
 }
 
 select {
@@ -15,24 +23,36 @@ select {
   width: 100%;
   padding: 5px;
   border-radius: 5px;
+  margin-bottom: 10px;
+}
+h2 {
+  margin: 2px;
+  font-size: 26px;
 }
 .city {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px dashed #f1b24b;
+  padding-bottom: 10px;
+  font-family: "DM Sans", sans-serif;
+}
+.date {
+  opacity: 0.62;
+  font-size: 14px;
 }
 .time {
-  font-size: 35px;
+  font-size: 38px;
   font-weight: bold;
 }
-
-h1 {
-  text-align: center;
-  font-size: 55px;
-  font-family: "Arsenal SC", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+.time small {
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 footer {
   text-align: center;
+  color: #f1b24b;
+}
+footer strong {
+  color: black;
 }
