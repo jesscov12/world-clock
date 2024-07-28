@@ -33,6 +33,18 @@ function updateTime() {
       "h:mm:ss[<small>] A[</small>]"
     );
   }
+
+  //Sao Paulo
+  let spauloElement = document.querySelector("#sao-paulo");
+  if (spauloElement) {
+    let spauloDateElement = spauloElement.querySelector(".date");
+    let spauloTimeElement = spauloElement.querySelector(".time");
+    let spauloTime = moment().tz("America/Sao_Paulo");
+    spauloDateElement.innerHTML = spauloTime.format("MMMM Do YYYY");
+    spauloTimeElement.innerHTML = spauloTime.format(
+      "h:mm:ss[<small>] A[</small>]"
+    );
+  }
 }
 function updateCity(event) {
   let cityTimeZone = event.target.value;
@@ -51,8 +63,9 @@ function updateCity(event) {
           <div class="time">${cityTime.format(
             "h:mm:ss"
           )} <small>${cityTime.format("A")}</small></div>
-        </div>
-  `;
+          </div>
+          <br />
+          <a href= "index.html">Back</a>`;
 }
 let citiesSelect = document.querySelector("#choose-city");
 citiesSelect.addEventListener("change", updateCity);
